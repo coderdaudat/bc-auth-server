@@ -3,8 +3,8 @@
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: 10.39.254.82:5000/coderdaudat/bc-auth-server
+  tag: 0.0.8
   pullPolicy: IfNotPresent
 service:
   name: bc-auth-server
