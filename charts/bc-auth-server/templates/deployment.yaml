@@ -22,20 +22,20 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
-          - name: DB_HOST
-            value: 127.0.0.1:3306
+#          - name: DB_HOST
+#            value: 127.0.0.1:3306
           # These secrets are required to start the pod.
           # [START cloudsql_secrets]
-          - name: DB_USER
-            valueFrom:
-              secretKeyRef:
-                name: cloudsql-db-credentials
-                key: username
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: cloudsql-db-credentials
-                key: password
+#          - name: DB_USER
+#            valueFrom:
+#              secretKeyRef:
+#                name: cloudsql-db-credentials
+#                key: username
+#          - name: DB_PASSWORD
+#            valueFrom:
+#              secretKeyRef:
+#                name: cloudsql-db-credentials
+#                key: password
           # [END cloudsql_secrets]
           - name: RABBIT_USER
             valueFrom:
@@ -77,20 +77,20 @@ spec:
       # of your Cloud SQL instance. The format is
       # $PROJECT:$REGION:$INSTANCE
       # [START proxy_container]
-      - name: cloudsql-proxy
-        image: gcr.io/cloudsql-docker/gce-proxy:1.11
-        command: ["/cloud_sql_proxy",
-                  "-instances=beemob-test:asia-southeast1:becastle-data=tcp:3306",
-                  "-credential_file=/secrets/cloudsql/credentials.json"]
-        # [START cloudsql_security_context]
-        securityContext:
-          runAsUser: 2  # non-root user
-          allowPrivilegeEscalation: false
-        # [END cloudsql_security_context]
-        volumeMounts:
-          - name: cloudsql-instance-credentials
-            mountPath: /secrets/cloudsql
-            readOnly: true
+#      - name: cloudsql-proxy
+#        image: gcr.io/cloudsql-docker/gce-proxy:1.11
+#        command: ["/cloud_sql_proxy",
+#                  "-instances=beemob-test:asia-southeast1:becastle-data=tcp:3306",
+#                  "-credential_file=/secrets/cloudsql/credentials.json"]
+#        # [START cloudsql_security_context]
+#        securityContext:
+#          runAsUser: 2  # non-root user
+#          allowPrivilegeEscalation: false
+#        # [END cloudsql_security_context]
+#        volumeMounts:
+#          - name: cloudsql-instance-credentials
+#            mountPath: /secrets/cloudsql
+#            readOnly: true
       # [END proxy_container]
         ports:
         - containerPort: {{ .Values.service.internalPort }}
@@ -114,8 +114,8 @@ spec:
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
       serviceAccountName: {{ .Values.service.name }}
       # [START volumes]
-      volumes:
-        - name: cloudsql-instance-credentials
-          secret:
-            secretName: cloudsql-instance-credentials
+#      volumes:
+#        - name: cloudsql-instance-credentials
+#          secret:
+#            secretName: cloudsql-instance-credentials
       # [END volumes]
