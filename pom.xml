@@ -90,10 +90,10 @@
 		</dependency>
 
 		<!--RABBIT MQ-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+		<!--</dependency>-->
 
 		<!--TRACING ZIPKIN-->
 		<dependency>
@@ -112,23 +112,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-security</artifactId>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-security</artifactId>-->
-			<!--<version>2.1.0.RELEASE</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.security</groupId>-->
-			<!--<artifactId>spring-security-jwt</artifactId>-->
-			<!--<version>1.0.9.RELEASE</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.security.oauth</groupId>-->
-			<!--<artifactId>spring-security-oauth2</artifactId>-->
-			<!--<version>2.2.0.RELEASE</version>-->
-		<!--</dependency>-->
 
 	</dependencies>
 
