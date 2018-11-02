@@ -52,6 +52,26 @@ spec:
               secretKeyRef:
                 name: rabbitmq-credentials
                 key: address
+          - name: CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: oauth-credentials
+                key: clientid
+          - name: CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: oauth-credentials
+                key: clientsecret
+          - name: SCOPE
+            valueFrom:
+              secretKeyRef:
+                name: oauth-credentials
+                key: scope
+          - name: GRANT_TYPES
+            valueFrom:
+              secretKeyRef:
+                name: oauth-credentials
+                key: granttypes
       # Change <INSTANCE_CONNECTION_NAME> here to include your GCP
       # project, the region of your Cloud SQL instance and the name
       # of your Cloud SQL instance. The format is
