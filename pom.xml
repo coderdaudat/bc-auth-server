@@ -76,18 +76,18 @@
 		<!--</dependency>-->
 
 		<!-- SWAGGER API-->
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.9.2</version>
-			<scope>compile</scope>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>io.springfox</groupId>-->
+			<!--<artifactId>springfox-swagger2</artifactId>-->
+			<!--<version>2.9.2</version>-->
+			<!--<scope>compile</scope>-->
+		<!--</dependency>-->
 
 		<!-- SLEUTH -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
+		<!--</dependency>-->
 
 		<!--RABBIT MQ-->
 		<!--<dependency>-->
@@ -96,11 +96,11 @@
 		<!--</dependency>-->
 
 		<!--TRACING ZIPKIN-->
-		<dependency>
-			<groupId>io.opentracing.contrib</groupId>
-			<artifactId>opentracing-spring-cloud-starter</artifactId>
-			<version>0.2.0</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>io.opentracing.contrib</groupId>-->
+			<!--<artifactId>opentracing-spring-cloud-starter</artifactId>-->
+			<!--<version>0.2.0</version>-->
+		<!--</dependency>-->
 
 		<!--SECURITY-->
 		<dependency>
